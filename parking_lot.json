@@ -1,37 +1,30 @@
 [
   {
-    "plate": "AAA-1111",
+    "plate": "AAA-8781",
     "company": "CARROS",
-    "model": "relampago marquinhos",
-    "color": "vermelho",
-    "spot": " 1d"
+    "model": "BMW M3",
+    "color": "verde",
+    "spot": "3d"
   },
   {
-    "plate": "AAA-1211",
+    "plate": "AAA-9781",
     "company": "CARROS",
-    "model": "relampago marquinhos",
-    "color": "vermelho",
-    "spot": " 1d"
+    "model": "BMW M3",
+    "color": "verde",
+    "spot": "4d"
   },
   {
-    "plate": "AAA-1211",
+    "plate": "AAA-0001",
     "company": "CARROS",
-    "model": "fusquinha",
-    "color": "branca",
-    "spot": " 1d"
+    "model": "BMW x6",
+    "color": "verde",
+    "spot": "1d"
   },
   {
-    "plate": "AAA-1991",
+    "plate": "AAA-7771",
     "company": "CARROS",
-    "model": "fusquinha",
-    "color": "branca",
-    "spot": " 1d"
-  },
-  {
-    "plate": "AAA-1991",
-    "company": "CARROS",
-    "model": "fusquinha",
-    "color": "branca",
-    "spot": " 1d"
+    "model": "Aston Martin",
+    "color": "prata",
+    "spot": "5d"
   }
 ]
