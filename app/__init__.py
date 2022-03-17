@@ -1,9 +1,14 @@
-from flask import Flask, jsonify, request
 from http import HTTPStatus
-from app.services import read_json, write_json
-from app.models.car_model import Car
-from app.exceptions.car_exc import CarAlreadyParkedError, SpotAlreadyParkedError
 
+from flask import Flask, jsonify, request
+
+from app.exceptions import (
+    CarAlreadyParkedError,
+    InvalidPlateError,
+    SpotAlreadyParkedError,
+)
+from app.models.car_model import Car
+from app.services import read_json, write_json
 
 app = Flask(__name__)
 
@@ -19,12 +24,15 @@ def retrieve():
 @app.post("/cars")
 def create():
     data = request.get_json()
-    car = Car(**data)
 
     # return write_json(FILEPATH, data) , HTTPStatus.CREATED
     try:
+        car = Car(**data)
         return car.add_car(), HTTPStatus.CREATED
-    except CarAlreadyParkedError:
-        return {"error": f"Plate {car.plate} already parked"}, HTTPStatus.CONFLICT
-    except SpotAlreadyParkedError:
-        return {"error": f"Spot {car.spot} already parked"}, HTTPStatus.CONFLICT
+    except InvalidPlateError as e:
+        return {"error": e.message}, e.status_code
+    except CarAlreadyParkedError as e:
+        # return {"error": f"Plate {car.plate} already parked"}, HTTPStatus.CONFLICT
+        return {"error": e.message}, e.status_code
+    except SpotAlreadyParkedError as e:
+        return {"error": e.message}, e.status_code

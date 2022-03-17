@@ -26,5 +26,12 @@
     "model": "Aston Martin",
     "color": "prata",
     "spot": "5d"
+  },
+  {
+    "plate": "AAA-7271",
+    "company": "CARROS",
+    "model": "Ferrari",
+    "color": "Vermelha",
+    "spot": "6d"
   }
 ]

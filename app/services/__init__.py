@@ -1,2 +1,1 @@
-from .handler_json import read_json
-from .handler_json import write_json
+from .handler_json import read_json, write_json
